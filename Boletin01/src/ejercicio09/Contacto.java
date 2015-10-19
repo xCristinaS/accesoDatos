@@ -19,8 +19,10 @@ public class Contacto implements Serializable{
 		this.id = id;
 	}
 	public String toString(){
-		float dinero;
-		return String.format("Nombre: %s | Telefono: %s | Direccio: %s | CP: %d | ï¿½Debo dinero?: %s %s",
-				nombreCont, telefono, direccion, codP, deboMoney?"Si":"No le debo dinero.",  (dinero = cantDeb) == 0?"":"| Cantidad debida: " + dinero);
+		return String.format("ID: %d - Nombre: %s  Telefono: %s  Direccio: %s  CP: %d  ¿Debo dinero?: %s %s", id, nombreCont, telefono, 
+				direccion, codP, deboMoney?"Si":"No le debo dinero.",  cantDeb == 0?"":" Cantidad debida: " + String.format("%.2f",cantDeb));
+	}
+	public void setID(int id){
+		this.id = id;
 	}
 }

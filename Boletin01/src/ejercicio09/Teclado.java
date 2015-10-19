@@ -545,7 +545,7 @@ public class Teclado {
 				numero = teclado.nextFloat();
 				error = false;
 			}catch (InputMismatchException e){
-				System.out.println("- Debe introducir un nï¿½mero: ");
+				System.out.println("- Debe introducir un número: ");
 
 				error = true;
 			}finally{
