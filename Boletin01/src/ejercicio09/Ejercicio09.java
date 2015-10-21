@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.LinkedList;
-
 import ejercicio09.Teclado.TipoEntre;
 
 public class Ejercicio09 {
@@ -105,7 +104,7 @@ public class Ejercicio09 {
 			aniadirAlFinal(id);
 			break;
 		case 2:
-			aniadirEnHueco(id);
+			aniadirEnHueco();
 			break;
 		case 3:
 			System.out.println();
@@ -117,18 +116,18 @@ public class Ejercicio09 {
 		agregarContactoAgenda(solicitarDatos(id));
 		System.out.println("\n- Contacto agregado.\n");
 	}
-	private static void aniadirEnHueco(int id) throws IOException{
-		boolean parar = false;
+	private static void aniadirEnHueco() throws IOException{
+		boolean parar = false; int id;
 		fichero.seek(0);
-		while (fichero.getFilePointer() != fichero.length() && !parar)
+		while (!parar && fichero.getFilePointer() != fichero.length())
 			if (fichero.readBoolean()){
 				parar = true;
 				fichero.seek(fichero.getFilePointer() - 1);
-				agregarContactoAgenda(solicitarDatos(id));
+				agregarContactoAgenda(solicitarDatos((id = (int)fichero.getFilePointer()/ESPACIO_CONTACTO) == 0? 1: id+1));
 			} else 
 				fichero.skipBytes(ESPACIO_CONTACTO-1);
 		if (!parar)
-			agregarContactoAgenda(solicitarDatos(id));
+			agregarContactoAgenda(solicitarDatos((id = (int)fichero.getFilePointer()/ESPACIO_CONTACTO) == 0? 1: id+1));
 		
 		System.out.println("\n- Contacto agregado.\n");
 	}

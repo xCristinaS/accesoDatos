@@ -19,7 +19,7 @@ public class Contacto implements Serializable{
 		this.id = id;
 	}
 	public String toString(){
-		return String.format("ID: %d - Nombre: %s  Telefono: %s  Direccio: %s  CP: %d  ¿Debo dinero?: %s %s", id, nombreCont, telefono, 
+		return String.format("ID: %d - Nombre: %s  Telefono: %s  Dirección: %s  CP: %d  \t¿Debo dinero?: %s %s", id, nombreCont, telefono, 
 				direccion, codP, deboMoney?"Si":"No le debo dinero.",  cantDeb == 0?"":" Cantidad debida: " + String.format("%.2f",cantDeb));
 	}
 	public void setID(int id){
