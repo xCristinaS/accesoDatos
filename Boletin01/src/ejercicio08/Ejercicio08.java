@@ -26,6 +26,7 @@ public class Ejercicio08 {
 		
 		try { 
 			// Sin Serialización.
+			System.out.println("Sin serializar.");
 			escribir = new DataOutputStream(new FileOutputStream("binario.dat"));
 			leer = new DataInputStream(new FileInputStream("binario.dat"));
 			
@@ -40,6 +41,7 @@ public class Ejercicio08 {
 			leer.close();
 			
 			// Con Serialización.
+			System.out.println("\nCon serialización.");
 			escribirOb = new ObjectOutputStream(new FileOutputStream("binarioSerial.dat"));
 			leerOb = new ObjectInputStream(new FileInputStream("binarioSerial.dat"));
 			

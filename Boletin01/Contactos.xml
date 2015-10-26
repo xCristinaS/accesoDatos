@@ -1,0 +1,18 @@
+<Contactos>
+  <Contacto>
+    <direccion>SanPedro</direccion>
+    <telefono>4578</telefono>
+    <nombreCont>Manue</nombreCont>
+    <codP>11300</codP>
+    <deboMoney>false</deboMoney>
+    <cantDeb>0.0</cantDeb>
+  </Contacto>
+  <Contacto>
+    <direccion>SanPedro</direccion>
+    <telefono>4578</telefono>
+    <nombreCont>Rosa</nombreCont>
+    <codP>11300</codP>
+    <deboMoney>false</deboMoney>
+    <cantDeb>0.0</cantDeb>
+  </Contacto>
+</Contactos>

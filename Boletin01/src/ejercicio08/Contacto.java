@@ -6,8 +6,8 @@ public class Contacto implements Serializable{
 		
 	private static final long serialVersionUID = 1L;
 	
-	String direccion, telefono, nombreCont;
-	int codP; boolean deboMoney; float cantDeb;
+	public String direccion, telefono, nombreCont;
+	public int codP; public boolean deboMoney; public float cantDeb;
 	
 	public Contacto(String nomCont, String tel, String dir, int codP, boolean deboMoney, float cantDeb){
 		nombreCont = nomCont;
