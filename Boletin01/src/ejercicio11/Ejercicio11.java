@@ -41,7 +41,7 @@ public class Ejercicio11 {
 			
 			escribir.close();
 			
-			leerAntiguo = new FileInputStream("binarioSerial.dat");
+			leerAntiguo = new FileInputStream("binario.dat");
 			leerNuevo = new FileInputStream("ejercicio11ObjectBin.dat");
 			
 			while (!salir && (i = leerAntiguo.read()) != -1 && (j = leerNuevo.read()) != -1)
