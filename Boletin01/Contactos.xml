@@ -1,16 +1,16 @@
 <Contactos>
   <Contacto>
-    <direccion>SanPedro</direccion>
-    <telefono>4578</telefono>
-    <nombreCont>Manue</nombreCont>
+    <direccion>rosales</direccion>
+    <telefono>123</telefono>
+    <nombreCont>Pepe</nombreCont>
     <codP>11300</codP>
-    <deboMoney>false</deboMoney>
-    <cantDeb>0.0</cantDeb>
+    <deboMoney>true</deboMoney>
+    <cantDeb>10.2</cantDeb>
   </Contacto>
   <Contacto>
     <direccion>SanPedro</direccion>
     <telefono>4578</telefono>
-    <nombreCont>Rosa</nombreCont>
+    <nombreCont>Juan</nombreCont>
     <codP>11300</codP>
     <deboMoney>false</deboMoney>
     <cantDeb>0.0</cantDeb>

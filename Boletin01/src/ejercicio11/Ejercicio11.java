@@ -48,8 +48,6 @@ public class Ejercicio11 {
 				if (i != j)
 					salir = true;
 			
-			// No va a dar que son iguales en la vida! Porque en el ejercicio 10 para convertir el fichero binario a un fichero .xml con la clase XStream es necesario
-			// que el fichero binario sea de objetos serializados y en este ejercicio estoy escribiendo el contenido que leo del .xml sin serializar (Teoría muy mia). 
 			if (salir)
 				System.out.println("Los ficheros no son iguales.");
 			else 
