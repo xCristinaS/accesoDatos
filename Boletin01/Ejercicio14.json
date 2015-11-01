@@ -1,0 +1,15 @@
+{
+  "direccion": "rosales",
+  "telefono": "123",
+  "nombreCont": "Pepe",
+  "codP": 11300,
+  "deboMoney": true,
+  "cantDeb": 10.2
+}{
+  "direccion": "SanPedro",
+  "telefono": "4578",
+  "nombreCont": "Juan",
+  "codP": 11300,
+  "deboMoney": false,
+  "cantDeb": 0.0
+}

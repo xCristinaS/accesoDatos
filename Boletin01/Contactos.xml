@@ -1,18 +1,18 @@
 <Contactos>
   <Contacto>
-    <direccion>rosales</direccion>
-    <telefono>123</telefono>
+    <direccion localidad="la linea">rosales</direccion>
+    <telefono prefijo="esp">123</telefono>
     <nombreCont>Pepe</nombreCont>
     <codP>11300</codP>
     <deboMoney>true</deboMoney>
-    <cantDeb>10.2</cantDeb>
+    <cantDeb moneda="€">10.2</cantDeb>
   </Contacto>
   <Contacto>
-    <direccion>SanPedro</direccion>
-    <telefono>4578</telefono>
+    <direccion localidad="NY">SanPedro</direccion>
+    <telefono prefijo="EEUU">4578</telefono>
     <nombreCont>Juan</nombreCont>
     <codP>11300</codP>
     <deboMoney>false</deboMoney>
-    <cantDeb>0.0</cantDeb>
+    <cantDeb moneda="$">0.0</cantDeb>
   </Contacto>
 </Contactos>
