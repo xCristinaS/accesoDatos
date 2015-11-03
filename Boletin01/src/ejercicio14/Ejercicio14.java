@@ -28,10 +28,9 @@ public class Ejercicio14 {
 		try {
 			escribirJson = new FileWriter("Ejercicio14.json");
 			lista = (ListaContactos) xstream.fromXML(new FileInputStream("Contactos.xml"));
-			for (Contacto c: lista.getLista())
-				escribirJson.write(gson.toJson(c));
+			escribirJson.write(gson.toJson(lista.getLista()));
 			
-			escribirJson.close();
+			escribirJson.close(); 
 		} catch (FileNotFoundException e){
 			
 		} catch (IOException e){
