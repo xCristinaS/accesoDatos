@@ -1,18 +1,20 @@
 package ejercicio15;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Contacto implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	public String nombreCont, telefono, direccion;
+	public String nombreCont, telefono, direccion; Date fechaNac;
 	public int codP; public boolean deboMoney; public float cantDeb;
 	
-	public Contacto(String nomCont, String tel, String dir, int codP, boolean deboMoney, float cantDeb){
+	public Contacto(String nomCont, String tel, String dir, int codP, Date fechaNac, boolean deboMoney, float cantDeb){
 		nombreCont = nomCont;
 		telefono = tel;
 		direccion = dir;
 		this.codP = codP;
+		this.fechaNac = fechaNac;
 		this.deboMoney = deboMoney;
 		this.cantDeb = cantDeb;
 	}
