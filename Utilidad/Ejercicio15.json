@@ -1,5 +1,5 @@
 [
-	[
+	{
 	  "nombreCont": "Pepe",
 	  "telefono": "123",
 	  "direccion": "rosales",
@@ -7,8 +7,8 @@
 	  "fechaNacimiento": "10/10/2000",
 	  "deboMoney": true,
 	  "cantDeb": 10.2
-	],
-	[
+	},
+	{
 	  "nombreCont": "Juan",
 	  "telefono": "4578",
 	  "direccion": "SanPedro",
@@ -16,8 +16,8 @@
 	  "fechaNacimiento": "10/07/1985",
 	  "deboMoney": false,
 	  "cantDeb": 0.0
-	],
-		[
+	},
+		{
 	  "nombreCont": "Pepe",
 	  "telefono": "1234",
 	  "direccion": "rosales",
@@ -25,9 +25,9 @@
 	  "fechaNacimiento": "10/10/2000",
 	  "deboMoney": true,
 	  "cantDeb": 10.2
-	]
+	}
 	,
-		[
+		{
 	  "nombreCont": "Pepe",
 	  "telefono": "1234",
 	  "direccion": "clavel",
@@ -35,9 +35,9 @@
 	  "fechaNacimiento": "10/10/2000",
 	  "deboMoney": true,
 	  "cantDeb": 10.2
-	]
+	}
 	,
-		[
+		{
 	  "nombreCont": "Pepe",
 	  "telefono": "1234",
 	  "direccion": "clavel",
@@ -45,5 +45,5 @@
 	  "fechaNacimiento": "10/10/2099",
 	  "deboMoney": true,
 	  "cantDeb": 10.2
-	]
+	}
 ]

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-nov-2015 12:48:00 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="clasesHibernate.Horario" table="horario" catalog="horario">
+        <composite-id name="id" class="clasesHibernate.HorarioId">
+            <key-property name="codOe" type="string">
+                <column name="CodOe" length="4" />
+            </key-property>
+            <key-property name="codCurso" type="string">
+                <column name="CodCurso" length="2" />
+            </key-property>
+            <key-property name="codAsignatura" type="string">
+                <column name="CodAsignatura" length="5" />
+            </key-property>
+            <key-property name="codTramo" type="string">
+                <column name="CodTramo" length="2" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="tramohorario" class="clasesHibernate.Tramohorario" update="false" insert="false" fetch="select">
+            <column name="CodTramo" length="2" not-null="true" />
+        </many-to-one>
+        <many-to-one name="asignatura" class="clasesHibernate.Asignatura" update="false" insert="false" fetch="select">
+            <column name="CodAsignatura" length="5" not-null="true" />
+        </many-to-one>
+        <many-to-one name="curso" class="clasesHibernate.Curso" update="false" insert="false" fetch="select">
+            <column name="CodOe" length="4" not-null="true" />
+            <column name="CodCurso" length="2" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

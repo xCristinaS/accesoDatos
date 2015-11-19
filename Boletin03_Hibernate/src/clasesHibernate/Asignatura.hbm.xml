@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-nov-2015 12:48:00 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="clasesHibernate.Asignatura" table="asignatura" catalog="horario">
+        <id name="codAsignatura" type="string">
+            <column name="CodAsignatura" length="5" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="80" not-null="true" />
+        </property>
+        <property name="horasSemanales" type="short">
+            <column name="HorasSemanales" not-null="true" />
+        </property>
+        <property name="horasTotales" type="java.lang.Short">
+            <column name="HorasTotales" />
+        </property>
+        <set name="repartos" table="reparto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CodAsignatura" length="5" not-null="true" />
+            </key>
+            <one-to-many class="clasesHibernate.Reparto" />
+        </set>
+        <set name="horarios" table="horario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CodAsignatura" length="5" not-null="true" />
+            </key>
+            <one-to-many class="clasesHibernate.Horario" />
+        </set>
+    </class>
+</hibernate-mapping>

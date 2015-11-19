@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-nov-2015 12:48:00 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="clasesHibernate.Ofertaeducativa" table="ofertaeducativa" catalog="horario">
+        <id name="codOe" type="string">
+            <column name="CodOe" length="4" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="60" unique="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="Tipo" length="4" />
+        </property>
+        <set name="cursos" table="curso" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CodOe" length="4" not-null="true" />
+            </key>
+            <one-to-many class="clasesHibernate.Curso" />
+        </set>
+    </class>
+</hibernate-mapping>

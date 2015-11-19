@@ -1,4 +1,4 @@
-package json;
+package consultJson;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,10 +10,10 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class JSON {
+public class ConsultJSON {
 	
 	public static LinkedList<String> buscarEnJSON(Map<String, String> mapa, String rutaJson){
-		String  json = "", linea, valor = "", auxResult = ""; int i, j, k = 0, l = 0; String[] aux, campos, valores;
+		String  json = "", linea, valor = "", auxResult = ""; int i, j, k = 0; String[] aux, campos = null, valores = null;
 		BufferedReader lector;
 		Pattern patron;
 		Matcher matcher;
@@ -21,7 +21,7 @@ public class JSON {
 		LinkedList<String[]> aux2 = new LinkedList<String[]>();
 		boolean[] comprobaciones = new boolean[mapa.size()]; boolean guardar;
 		
-		patron = Pattern.compile("[\\||{\\[](.+?)[\\}||\\]]"); // Para sacar un objeto guardado en el Json.
+		patron = Pattern.compile("[\\{||\\[](.+?)[\\}||\\]]"); // Para sacar un objeto guardado en el Json.
 		
 		try {
 			lector = new BufferedReader(new FileReader(rutaJson));
@@ -40,33 +40,35 @@ public class JSON {
 				objetosJson.set(i, objetosJson.get(i).replaceAll("\"","")); // Le quito todas las comillas a los objetos de la lista. 
 			
 			for (j = 0; j < objetosJson.size(); j++){
-				guardar = true; Arrays.fill(comprobaciones, false); l = 0;
+				guardar = true; Arrays.fill(comprobaciones, false);
 				aux = objetosJson.get(j).split(","); // Guardo en aux, la cadena correspondiente al primer objeto de la lista. 
 				if (aux2.size() > 0)
 					aux2.removeAll(aux2); 
 				for (i = 0; i < aux.length; i++)
 					aux2.add(aux[i].split(":")); // Agrego a una segunda lista el conjunto "atributo - valor" de la cadena aux. 
 				
-				campos = new String[aux2.size()]; 
-				valores = new String[aux2.size()];
+				if (j == 0){ // Para no crear basura digital. 
+					campos = new String[aux2.size()]; 
+					valores = new String[aux2.size()];
+				} else {
+					Arrays.fill(campos, "");
+					Arrays.fill(valores, "");
+				}
 				i = 0;
 				for (String[] conjunto: aux2){
 					campos[i] = conjunto[0]; // Meto los atributos en un array de campos. 
 					valores[i] = conjunto[1].trim(); // Meto los valores en otro. 
 					i++;
-				}
-				for (String clave: mapa.keySet()){ // Recorro las claves del mapa. 
-					valor = mapa.get(clave); // cojo el valor de esa clave. 
-					k = 0;
-					while(l < mapa.size()){ // este bucle lo necesito por si empieza a buscar de atras para delante. Para que realice la busqueda tantas veces como campos por los que buscar, independientemente de la posicion.
-						for (i = 0; i < campos.length; i++)
-							if (campos[i].equals(clave) && valor.equals(valores[i])){
-								comprobaciones[k] = true;
-								k++;
-							}
-						l++;
+				}	
+				k = 0;
+				for (i = 0; i < campos.length; i++) // Por cada campo
+					for (String clave: mapa.keySet()){ // Recorro las claves del mapa para ir localizando los campos por los que busco
+						valor = mapa.get(clave); // cojo el valor por el que busco 
+						if (campos[i].equals(clave) && valor.equals(valores[i])){ // si la clave que busco se corresponde con el campo, y el valor del campo con el que quiero
+							comprobaciones[k] = true; 
+							k++;
+						}
 					}
-				}
 				for (i = 0; guardar && i < comprobaciones.length; i++)
 					if (!comprobaciones[i])
 						guardar = false;

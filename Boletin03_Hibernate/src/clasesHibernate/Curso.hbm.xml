@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-nov-2015 12:48:00 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="clasesHibernate.Curso" table="curso" catalog="horario">
+        <composite-id name="id" class="clasesHibernate.CursoId">
+            <key-property name="codOe" type="string">
+                <column name="CodOe" length="4" />
+            </key-property>
+            <key-property name="codCurso" type="string">
+                <column name="CodCurso" length="2" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="ofertaeducativa" class="clasesHibernate.Ofertaeducativa" update="false" insert="false" fetch="select">
+            <column name="CodOe" length="4" not-null="true" />
+        </many-to-one>
+        <many-to-one name="profesor" class="clasesHibernate.Profesor" fetch="select">
+            <column name="Tutor" length="3" not-null="true" unique="true" />
+        </many-to-one>
+        <set name="repartos" table="reparto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CodOe" length="4" not-null="true" />
+                <column name="CodCurso" length="2" not-null="true" />
+            </key>
+            <one-to-many class="clasesHibernate.Reparto" />
+        </set>
+        <set name="horarios" table="horario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CodOe" length="4" not-null="true" />
+                <column name="CodCurso" length="2" not-null="true" />
+            </key>
+            <one-to-many class="clasesHibernate.Horario" />
+        </set>
+    </class>
+</hibernate-mapping>

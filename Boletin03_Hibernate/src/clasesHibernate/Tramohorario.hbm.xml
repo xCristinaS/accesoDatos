@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18-nov-2015 12:48:00 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="clasesHibernate.Tramohorario" table="tramohorario" catalog="horario">
+        <id name="codTramo" type="string">
+            <column name="CodTramo" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="horaInicio" type="time">
+            <column name="HoraInicio" length="8" />
+        </property>
+        <property name="horaFin" type="time">
+            <column name="HoraFin" length="8" />
+        </property>
+        <property name="dia" type="string">
+            <column name="Dia" length="10" />
+        </property>
+        <set name="horarios" table="horario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CodTramo" length="2" not-null="true" />
+            </key>
+            <one-to-many class="clasesHibernate.Horario" />
+        </set>
+    </class>
+</hibernate-mapping>
