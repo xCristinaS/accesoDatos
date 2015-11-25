@@ -58,5 +58,4 @@ public class Horario implements java.io.Serializable {
 	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
-
 }

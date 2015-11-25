@@ -76,5 +76,4 @@ public class Tramohorario implements java.io.Serializable {
 	public void setHorarios(Set<Horario> horarios) {
 		this.horarios = horarios;
 	}
-
 }

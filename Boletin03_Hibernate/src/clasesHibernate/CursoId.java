@@ -65,5 +65,4 @@ public class CursoId implements java.io.Serializable {
 				+ (getCodCurso() == null ? 0 : this.getCodCurso().hashCode());
 		return result;
 	}
-
 }

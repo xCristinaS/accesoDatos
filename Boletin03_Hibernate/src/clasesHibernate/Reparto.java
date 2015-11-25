@@ -65,4 +65,5 @@ public class Reparto implements java.io.Serializable {
 		this.curso = curso;
 	}
 
+	
 }

@@ -77,5 +77,4 @@ public class Curso implements java.io.Serializable {
 	public void setHorarios(Set<Horario> horarios) {
 		this.horarios = horarios;
 	}
-
 }
