@@ -14,12 +14,12 @@ public class Ejercicio03HQL {
 		Transaction transaccion = sesion.beginTransaction();
 		int i;
 		
-		String insertHQL = "insert into historicoprofesores (codProf, nombre, alta, fechaDeNacimiento) "
-				+ "select p.codProf, p.nombre, p.alta, p.fechaDeNacimiento from profesor p where p.codProf = :codProf";
+		String insertHQL = "insert into Historicoprofesores (codProf, nombre, alta, fechaDeNacimiento) "
+				+ "select p.codProf, p.nombre, p.alta, p.fechaDeNacimiento from Profesor p where p.codProf = :codProf";
 		i = sesion.createQuery(insertHQL).setString("codProf", "PR1").executeUpdate();
 		
 		if (i == 1)
-			System.out.println("Profe modificado, otra vez.");
+			System.out.println("Profesor agregado.");
 		
 		transaccion.commit();
 		sesion.close();
