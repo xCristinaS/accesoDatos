@@ -17,6 +17,7 @@
         <mapping resource="clasesHibernate/Asignatura.hbm.xml" />
         <mapping resource="clasesHibernate/Ofertaeducativa.hbm.xml" />
         <mapping resource="clasesHibernate/Profesor.hbm.xml" />
+        <mapping resource="clasesHibernate/Historicoprofesores.hbm.xml" />
         <mapping resource="clasesHibernate/Reparto.hbm.xml" />
     </session-factory>
 </hibernate-configuration>

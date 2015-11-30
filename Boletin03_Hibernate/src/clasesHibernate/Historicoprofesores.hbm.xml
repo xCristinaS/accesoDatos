@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 30-nov-2015 12:27:57 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="clasesHibernate.Profesor" table="profesor" catalog="horario">
+    <class name="clasesHibernate.Historicoprofesores" table="historicoprofesores" catalog="horario">
         <id name="codProf" type="string">
             <column name="CodProf" length="3" />
             <generator class="assigned" />
@@ -17,17 +17,5 @@
         <property name="fechaDeNacimiento" type="date">
             <column name="FechaDeNacimiento" length="10" />
         </property>
-        <set name="repartos" table="reparto" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="CodProf" length="3" />
-            </key>
-            <one-to-many class="clasesHibernate.Reparto" />
-        </set>
-        <set name="cursos" table="curso" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="Tutor" length="3" not-null="true" unique="true" />
-            </key>
-            <one-to-many class="clasesHibernate.Curso" />
-        </set>
     </class>
 </hibernate-mapping>

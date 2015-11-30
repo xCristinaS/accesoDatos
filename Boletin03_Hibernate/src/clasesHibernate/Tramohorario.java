@@ -1,6 +1,6 @@
 package clasesHibernate;
 
-// Generated 18-nov-2015 12:47:59 by Hibernate Tools 3.4.0.CR1
+// Generated 30-nov-2015 12:27:56 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,9 +11,6 @@ import java.util.Set;
  */
 public class Tramohorario implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String codTramo;
 	private Date horaInicio;
@@ -76,4 +73,5 @@ public class Tramohorario implements java.io.Serializable {
 	public void setHorarios(Set<Horario> horarios) {
 		this.horarios = horarios;
 	}
+
 }
