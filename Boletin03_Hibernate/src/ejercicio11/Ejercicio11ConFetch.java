@@ -10,6 +10,7 @@ import clasesHibernate.*;
 
 public class Ejercicio11ConFetch {
 	
+	
 	public static void main(String[] args) {
 		//Mostrar los datos de todas las ofertas educativas y todos los datos de sus cursos. Si la oferta
 		//educativa no tiene ningún curso, indicarlo. 
