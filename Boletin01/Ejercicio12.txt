@@ -1,2 +1,0 @@
-direccion: (Attb.localidad: la linea) rosales,telefono: (Attb.prefijo: esp) 123,nombreCont: Pepe,codP: 11300,deboMoney: true,cantDeb: (Attb.moneda: €) 10.2,
-direccion: (Attb.localidad: NY) SanPedro,telefono: (Attb.prefijo: EEUU) 4578,nombreCont: Juan,codP: 11300,deboMoney: false,cantDeb: (Attb.moneda: $) 0.0,
