@@ -1,7 +1,6 @@
 package ejercicio04;
 
 import java.util.Iterator;
-import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -18,13 +17,11 @@ public class Ejercicio04ConIterate {
 		Session sesion = sesionFactory.openSession();
 		String select = "from Profesor";
 		Query consulta = sesion.createQuery(select);
-		List<Profesor> lista; 
 		Iterator<Profesor> it;
 		Profesor p;
 		
 		consulta.setFetchSize(5);
-		lista = consulta.list();
-		it = lista.iterator();
+		it = consulta.iterate();
 		
 		while (it.hasNext()){
 			p = it.next();

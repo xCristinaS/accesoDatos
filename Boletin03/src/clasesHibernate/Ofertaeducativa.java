@@ -1,6 +1,5 @@
 package clasesHibernate;
-
-// Generated 30-nov-2015 12:27:56 by Hibernate Tools 3.4.0.CR1
+// Generated 08-dic-2015 11:53:41 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +9,9 @@ import java.util.Set;
  */
 public class Ofertaeducativa implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	private String codOe;
 	private String nombre;
@@ -24,8 +26,7 @@ public class Ofertaeducativa implements java.io.Serializable {
 		this.codOe = codOe;
 	}
 
-	public Ofertaeducativa(String codOe, String nombre, String descripcion,
-			String tipo, Set<Curso> cursos) {
+	public Ofertaeducativa(String codOe, String nombre, String descripcion, String tipo, Set<Curso> cursos) {
 		this.codOe = codOe;
 		this.nombre = nombre;
 		this.descripcion = descripcion;

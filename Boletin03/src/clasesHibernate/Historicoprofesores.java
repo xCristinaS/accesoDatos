@@ -1,6 +1,5 @@
 package clasesHibernate;
-
-// Generated 30-nov-2015 12:27:56 by Hibernate Tools 3.4.0.CR1
+// Generated 08-dic-2015 11:53:41 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 
@@ -9,6 +8,9 @@ import java.util.Date;
  */
 public class Historicoprofesores implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 	private String codProf;
 	private String nombre;
@@ -24,8 +26,7 @@ public class Historicoprofesores implements java.io.Serializable {
 		this.alta = alta;
 	}
 
-	public Historicoprofesores(String codProf, String nombre, Date alta,
-			Date fechaDeNacimiento) {
+	public Historicoprofesores(String codProf, String nombre, Date alta, Date fechaDeNacimiento) {
 		this.codProf = codProf;
 		this.nombre = nombre;
 		this.alta = alta;

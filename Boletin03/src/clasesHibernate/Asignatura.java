@@ -1,6 +1,5 @@
 package clasesHibernate;
-
-// Generated 30-nov-2015 12:27:56 by Hibernate Tools 3.4.0.CR1
+// Generated 08-dic-2015 11:53:41 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -27,8 +26,8 @@ public class Asignatura implements java.io.Serializable {
 		this.horasSemanales = horasSemanales;
 	}
 
-	public Asignatura(String codAsignatura, String nombre,
-			short horasSemanales, Short horasTotales, Set<Reparto> repartos, Set<Horario> horarios) {
+	public Asignatura(String codAsignatura, String nombre, short horasSemanales, Short horasTotales, Set<Reparto> repartos,
+			Set<Horario> horarios) {
 		this.codAsignatura = codAsignatura;
 		this.nombre = nombre;
 		this.horasSemanales = horasSemanales;
