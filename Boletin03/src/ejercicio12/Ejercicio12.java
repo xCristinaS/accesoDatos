@@ -18,7 +18,7 @@ public class Ejercicio12 {
 		Session sesion = sesionFactory.openSession();
 		String select = "from Profesor p left join p.cursos";
 		Query cons = sesion.createQuery(select);
-		Iterator<Object> it = cons.iterate();
+		Iterator<Object[]> it = cons.iterate();
 		Object[] conjunto;
 		Profesor p; Curso c; 
 		while (it.hasNext()){

@@ -1,0 +1,82 @@
+[
+  {
+    "codProf": "AGL",
+    "nombre": "Ana Gutiérrez Lozano",
+    "fechaNacimiento": "1979-12-20",
+    "codOe": "DAM",
+    "codCurso": "1A",
+    "numAsignaturas": 3
+  },
+  {
+    "codProf": "CSG",
+    "nombre": "Cristóbal Sánchez García",
+    "fechaNacimiento": "1977-07-12",
+    "codOe": " ",
+    "codCurso": " ",
+    "numAsignaturas": 1
+  },
+  {
+    "codProf": "EPM",
+    "nombre": "Eva Peralta Macías",
+    "fechaNacimiento": "1982-08-15",
+    "codOe": " ",
+    "codCurso": " ",
+    "numAsignaturas": 2
+  },
+  {
+    "codProf": "JER",
+    "nombre": "José Manuel Escribano Romero",
+    "fechaNacimiento": "1986-09-13",
+    "codOe": " ",
+    "codCurso": " ",
+    "numAsignaturas": 2
+  },
+  {
+    "codProf": "JGG",
+    "nombre": "Javier Graña González",
+    "fechaNacimiento": "1977-04-01",
+    "codOe": "SMR",
+    "codCurso": "1A",
+    "numAsignaturas": 4
+  },
+  {
+    "codProf": "MAF",
+    "nombre": "María José Ávila Fernández",
+    "fechaNacimiento": "1979-03-24",
+    "codOe": "SMR",
+    "codCurso": "2A",
+    "numAsignaturas": 3
+  },
+  {
+    "codProf": "PBG",
+    "nombre": "Pilar Baena García",
+    "fechaNacimiento": "1982-11-16",
+    "codOe": " ",
+    "codCurso": " ",
+    "numAsignaturas": 4
+  },
+  {
+    "codProf": "PJM",
+    "nombre": "Pedro Joya Máñez",
+    "fechaNacimiento": "1980-05-15",
+    "codOe": " ",
+    "codCurso": " ",
+    "numAsignaturas": 5
+  },
+  {
+    "codProf": "RAR",
+    "nombre": "Rosa Alcázar Rosal",
+    "fechaNacimiento": "1979-05-14",
+    "codOe": " ",
+    "codCurso": " ",
+    "numAsignaturas": 4
+  },
+  {
+    "codProf": "SAA",
+    "nombre": "Santiago Acha Aller",
+    "fechaNacimiento": "1978-10-04",
+    "codOe": "DAM",
+    "codCurso": "2A",
+    "numAsignaturas": 2
+  }
+]

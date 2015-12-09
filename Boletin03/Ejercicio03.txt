@@ -1,0 +1,124 @@
+Código: @APLI    Nombre: Desdoble de Aplicaciones ofimáticas                     Horas semanales: 4
+
+	Código curso: SMR 1A       Tramos horarios: L2
+
+Código: @BDD     Nombre: Desdoble de Bases de Datos                              Horas semanales: 3
+
+	Código curso: DAM 1A       Tramos horarios: L4
+
+Código: @MONT    Nombre: Desdoble de Montaje y mantenimiento de equipos          Horas semanales: 3
+
+	Código curso: SMR 1A       Tramos horarios: M3
+
+Código: @PROG    Nombre: Desdoble de Programación                                Horas semanales: 6
+
+	Código curso: DAM 1A       Tramos horarios: L2
+
+Código: @RED     Nombre: Desdoble de Redes Locales                               Horas semanales: 3
+
+	Código curso: SMR 1A       Tramos horarios: M4
+
+Código: @SIST    Nombre: Desdoble de Sistemas informáticos                       Horas semanales: 3
+
+	Código curso: DAM 1A       Tramos horarios: J4
+
+Código: AD       Nombre: Acceso a datos                                          Horas semanales: 5
+
+	Código curso: DAM 2A       Tramos horarios: M5
+
+Código: APLI     Nombre: Aplicaciones ofimáticas                                 Horas semanales: 8
+
+	Código curso: SMR 1A       Tramos horarios: V3
+
+Código: APLIW    Nombre: Aplicaciones web                                        Horas semanales: 4
+
+	Código curso: SMR 2A       Tramos horarios: M4
+
+Código: BDD      Nombre: Bases de Datos                                          Horas semanales: 6
+
+	Código curso: DAM 1A       Tramos horarios: V3
+
+Código: DI       Nombre: Desarrollo de interfaces                                Horas semanales: 7
+
+	Código curso: DAM 2A       Tramos horarios: L6
+
+Código: EEE      Nombre: Equipos eléctricos y electrónicos                       Horas semanales: 6
+
+	Código curso:              Tramos horarios: 
+
+Código: EIE      Nombre: Empresa e iniciativa emprendedora                       Horas semanales: 4
+
+	Código curso: DAM 2A       Tramos horarios: X6
+
+Código: EIEM     Nombre: Empresa e iniciativa empresarial                        Horas semanales: 4
+
+	Código curso: SMR 2A       Tramos horarios: V5
+
+Código: ENT      Nombre: Entornos de desarrollo                                  Horas semanales: 3
+
+	Código curso: DAM 1A       Tramos horarios: V5
+
+Código: FOL      Nombre: Formación y orientación laboral                         Horas semanales: 3
+
+	Código curso: SMR 1A       Tramos horarios: J5
+
+	Código curso: DAM 1A       Tramos horarios: X5
+
+Código: HLC      Nombre: Horas de Libre Configuración                            Horas semanales: 3
+
+	Código curso: SMR 2A       Tramos horarios: V5
+
+	Código curso: DAM 2A       Tramos horarios: L2
+
+Código: MARC     Nombre: Lenguajes de marcas y sistemas de gestión de información Horas semanales: 4
+
+	Código curso: DAM 1A       Tramos horarios: M6
+
+Código: MMSCI    Nombre: Montaje y manetenimientos de sistemas y componentes informáticos Horas semanales: 10
+
+	Código curso:              Tramos horarios: 
+
+Código: MONT     Nombre: Montaje y mantenimiento de equipos                      Horas semanales: 7
+
+	Código curso: SMR 1A       Tramos horarios: M3
+
+Código: PMDMO    Nombre: Programación multimedia y dispositivos móviles          Horas semanales: 4
+
+	Código curso: DAM 2A       Tramos horarios: J3
+
+Código: PROG     Nombre: Programación                                            Horas semanales: 8
+
+	Código curso: DAM 1A       Tramos horarios: L1
+
+Código: PSPRO    Nombre: Programación de servicios y procesos                    Horas semanales: 3
+
+	Código curso: DAM 2A       Tramos horarios: L1
+
+Código: RED      Nombre: Redes Locales                                           Horas semanales: 7
+
+	Código curso: SMR 1A       Tramos horarios: L3
+
+Código: SEG      Nombre: Seguridad informática                                   Horas semanales: 5
+
+	Código curso: SMR 2A       Tramos horarios: V4
+
+Código: SERV     Nombre: Servicios en red                                        Horas semanales: 7
+
+	Código curso: SMR 2A       Tramos horarios: L5
+
+Código: SGE      Nombre: Sistemas de gestión empresarial                         Horas semanales: 4
+
+	Código curso: DAM 2A       Tramos horarios: J1
+
+Código: SISM     Nombre: Sistemas operativos monopuestos                         Horas semanales: 5
+
+	Código curso: SMR 1A       Tramos horarios: V5
+
+Código: SISR     Nombre: Sistemas operativos en red                              Horas semanales: 7
+
+	Código curso: SMR 2A       Tramos horarios: X4
+
+Código: SIST     Nombre: Sistemas informáticos                                   Horas semanales: 6
+
+	Código curso: DAM 1A       Tramos horarios: X6
+
