@@ -1,0 +1,33 @@
+ID: cliente1, Nombre: Baldomero (actualizado), NIF: 74782487r
+	- Direcci?n:
+		- Calle: calle ronda golf (actualizada), C?digo Postal: 11315, N?mero: 106, Poblaci?n: 
+			- Poblaci?n: La linea, Pa?s: Espa?a, Provincia: 
+				- Provincia: Cadiz, Comunidad Aut?noma: Andalucia
+
+	- Telefonos: 
+		- Tipo: fijo_personal, N?mero:  (956) 956474787
+		- Tipo: fijo_personal, N?mero:  (856) 888888888
+		- Tipo: fijo_personal, N?mero:  (856) 777777777
+		- Tipo: fijo_personal, N?mero:  (910) 474747878
+		- Tipo: fijo_personal, N?mero:  (956) 447878787
+		
+
+- Cliente: ID: cliente1, Nombre: Baldomero (actualizado), NIF: 74782487r
+	- Direcci?n:
+		- Calle: calle ronda golf (actualizada), C?digo Postal: 11315, N?mero: 106, Poblaci?n: 
+			- Poblaci?n: La linea, Pa?s: Espa?a, Provincia: 
+				- Provincia: Cadiz, Comunidad Aut?noma: Andalucia
+
+	- Telefonos: 
+		- Tipo: fijo_personal, N?mero:  (956) 956474787
+		- Tipo: fijo_personal, N?mero:  (856) 888888888
+		- Tipo: fijo_personal, N?mero:  (856) 777777777
+		- Tipo: fijo_personal, N?mero:  (910) 474747878
+		- Tipo: fijo_personal, N?mero:  (956) 447878787
+		
+
+- Venta: 1
+	- Cantidad: 2, Producto: ID: prodIn2, Descripci?n: portatil asus, Stock: 20, PVP: 859,99
+	- Cantidad: 1, Producto: ID: prodMay1, Descripci?n: Playstation 4, Stock: 100, PVP1: 859,99, PVP2 418,50, PVP3: 501,70
+	- Cantidad: 1, Producto: ID: prodMay2, Descripci?n: Pantalla LG, Stock: 300, PVP1: 689,75, PVP2 758,50, PVP3: 1024,70
+
