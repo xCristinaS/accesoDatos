@@ -20,4 +20,15 @@ public class Provincia {
     public String toString() {
         return String.format("- Provincia: %s, Comunidad Autónoma: %s", provincia, comunidadAutonoma);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if (obj instanceof Provincia){
+            Provincia p = (Provincia) obj;
+            if (provincia.equals(p.provincia) && comunidadAutonoma.equals(p.comunidadAutonoma))
+                r = true;
+        }
+        return r;
+    }
 }

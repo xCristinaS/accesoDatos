@@ -22,4 +22,15 @@ public class ProductoPorMayor extends Producto{
     public String toString() {
         return String.format("%s, PVP1: %.2f, PVP2 %.2f, PVP3: %.2f", super.toString(), pvp1, pvp2, pvp3);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if (obj instanceof ProductoPorMayor){
+            ProductoPorMayor p = (ProductoPorMayor) obj;
+            if (super.equals(p) && pvp1 == p.pvp1 && pvp2 == p.pvp2 && pvp3 == p.pvp3)
+                r = true;
+        }
+        return r;
+    }
 }

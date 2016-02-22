@@ -65,9 +65,10 @@ public class Ejercicio10 {
                     System.out.print("Respuesta:");
                     resp = Teclado.leerIntEntre(1, productos.size(), Teclado.TipoEntre.AMBOS_INC);
                 } while (resp < 1 || resp > productos.size());
-                em.getTransaction().begin();
-                em.remove(productos.get(resp-1));
-                em.getTransaction().commit();
+                //em.getTransaction().begin();
+                //em.remove(productos.get(resp-1));
+                //em.getTransaction().commit();
+                System.out.println("Operación no permitida, no se puede borrar un producto.");
                 break;
             case 3:
                 do {

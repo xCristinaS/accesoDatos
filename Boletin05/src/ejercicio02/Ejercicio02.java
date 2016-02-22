@@ -28,7 +28,7 @@ public class Ejercicio02 {
         p = em.find(Producto.class, "prodIn1");
         lineas.addLast(new Venta.LineasVenta(2, p));
         p = em.find(Producto.class, "prodMay1");
-        lineas.addLast(new Venta.LineasVenta(1, p));
+        lineas.addLast(new Venta.LineasVenta(3, p));
         p = em.find(Producto.class, "prodIn2");
         lineas.addLast(new Venta.LineasVenta(1, p));
 
@@ -42,7 +42,7 @@ public class Ejercicio02 {
         p = em.find(Producto.class, "prodIn2");
         lineas.addLast(new Venta.LineasVenta(2, p));
         p = em.find(Producto.class, "prodMay1");
-        lineas.addLast(new Venta.LineasVenta(1, p));
+        lineas.addLast(new Venta.LineasVenta(3, p));
         p = em.find(Producto.class, "prodMay2");
         lineas.addLast(new Venta.LineasVenta(1, p));
 

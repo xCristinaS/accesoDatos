@@ -25,4 +25,15 @@ public class Poblacion {
     public String toString() {
         return String.format("\t- Población: %s, País: %s, Provincia: \n\t\t\t\t%s", poblacion, pais, provincia.toString());
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if (obj instanceof Poblacion){
+            Poblacion p = (Poblacion) obj;
+            if (poblacion.equals(p.poblacion) && pais.equals(p.pais) && ((provincia != null && p.provincia != null && provincia.equals(p.provincia)) || (provincia == null && p.provincia == null)))
+                r = true;
+        }
+        return r;
+    }
 }

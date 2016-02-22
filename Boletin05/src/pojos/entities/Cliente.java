@@ -30,7 +30,7 @@ public class Cliente {
     @ElementCollection(fetch = FetchType.EAGER)
     private LinkedList<Telefono> telefonos;
 
-    public Cliente(String idCliente, String nombre, String nif, Direccion direccion, LinkedList<Telefono> telefonos){
+    public Cliente(String idCliente, String nombre, String nif, Direccion direccion, LinkedList<Telefono> telefonos) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.nif = nif;
@@ -41,7 +41,33 @@ public class Cliente {
             this.telefonos = telefonos;
     }
 
-    public void setTelefonos(LinkedList<Telefono> telefonos){
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = true, encontrado;
+        if (obj instanceof Cliente) {
+            Cliente c = (Cliente) obj;
+            if (idCliente != c.idCliente || !nombre.equals(c.nombre) || !nif.equals(c.nif) || (direccion == null && c.direccion != null) || (direccion != null && c.direccion == null) || (direccion != null && c.direccion != null && !direccion.equals(c.direccion)))
+                r = false;
+            if (r && telefonos != null && c.telefonos != null) {
+                if (telefonos.size() == c.telefonos.size()) {
+                    for (int i = 0; r && i < telefonos.size(); i++) {
+                        encontrado = false;
+                        for (int j = 0; !encontrado && j < c.telefonos.size(); j++)
+                            if (telefonos.get(i).equals(c.telefonos.get(j)))
+                                encontrado = true;
+
+                        if (!encontrado)
+                            r = false;
+                    }
+                } else
+                    r = false;
+            } else if (r && ((telefonos == null && c.telefonos != null) || (telefonos != null && c.telefonos == null)))
+                r = false;
+        }
+        return r;
+    }
+
+    public void setTelefonos(LinkedList<Telefono> telefonos) {
         this.telefonos = telefonos;
     }
 
@@ -97,15 +123,15 @@ public class Cliente {
     }
 
     @PostRemove
-    private void eliminarVentas(){
-        String select = "select v from Venta v where v.cliente.idCliente = '"+ idCliente +"'";
+    private void eliminarVentas() {
+        String select = "select v from Venta v where v.cliente.idCliente = '" + idCliente + "'";
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("$objectdb/db/ventas.odb");
         EntityManager em = emf.createEntityManager();
         List<Venta> ventas;
         Query query = em.createQuery(select);
         ventas = query.getResultList();
         em.getTransaction().begin();
-        for (Venta v: ventas)
+        for (Venta v : ventas)
             em.remove(v);
         em.getTransaction().commit();
         em.close();
@@ -113,11 +139,11 @@ public class Cliente {
     }
 
     @PreRemove
-    private void escribirEnFichero(){
+    private void escribirEnFichero() {
         FileWriter escritor;
         try {
             escritor = new FileWriter(new File("./eliminados.txt"), true);
-            escritor.write(this.toString()+"\n\n");
+            escritor.write(this.toString() + "\n\n");
             escritor.close();
         } catch (IOException e) {
             e.printStackTrace();

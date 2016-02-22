@@ -81,24 +81,61 @@ public class Venta {
         return cadena;
     }
 
-    @Embeddable
-        public static class LineasVenta {
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = true, encontrado;
+        if (obj instanceof Venta){
+            Venta v = (Venta)obj;
+            if (idVenta != v.idVenta || (cliente == null && v.cliente != null) || (cliente != null && v.cliente == null) || (cliente != null && v.cliente != null && !cliente.equals(v.cliente)) || facturada != v.facturada || (fechaVenta == null && v.fechaVenta != null) || (fechaVenta != null && v.fechaVenta == null) || (fechaVenta != null && v.fechaVenta != null && !fechaVenta.equals(v.fechaVenta)))
+                r = false;
+            if (r && lineas != null && v.lineas != null){
+                if (lineas.size() == v.lineas.size()) {
+                    for (int i = 0; r && i < lineas.size(); i++) {
+                        encontrado = false;
+                        for (int j = 0; !encontrado && j < v.lineas.size(); j++)
+                            if (lineas.get(i).equals(v.lineas.get(j)))
+                                encontrado = true;
 
-            int cantidadProductos;
-
-            @OneToOne
-            private Producto producto;
-
-            public LineasVenta(){}
-
-            public LineasVenta(int cantidadProductos, Producto producto){
-                this.cantidadProductos = cantidadProductos;
-                this.producto = producto;
-            }
-
-            @Override
-            public String toString() {
-                return String.format("Cantidad: %d, Producto: %s", cantidadProductos, producto.toString());
-            }
+                        if (!encontrado)
+                            r = false;
+                    }
+                } else
+                    r = false;
+            } else if (r && ((lineas == null && v.lineas != null) || (lineas != null && v.lineas == null)))
+                r = false;
         }
+        return r;
+    }
+
+    @Embeddable
+    public static class LineasVenta {
+
+        int cantidadProductos;
+
+        @OneToOne
+        private Producto producto;
+
+        public LineasVenta(){}
+
+        public LineasVenta(int cantidadProductos, Producto producto){
+            this.cantidadProductos = cantidadProductos;
+            this.producto = producto;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("Cantidad: %d, Producto: %s", cantidadProductos, producto.toString());
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            boolean r = false;
+            if (obj instanceof LineasVenta){
+                LineasVenta l = (LineasVenta) obj;
+                if (cantidadProductos == l.cantidadProductos && ((producto == null && l.producto == null) || (producto != null && l.producto != null && producto.equals(l.producto))))
+                    r = true;
+            }
+            return r;
+        }
+    }
 }

@@ -40,4 +40,15 @@ public class Telefono {
     public TipoTlf getTipo() {
         return tipo;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if (obj instanceof Telefono) {
+            Telefono t = (Telefono)obj;
+            if (tipo == t.tipo && ((numeroTlf == null && t.numeroTlf == null) || (numeroTlf != null && t.numeroTlf != null && numeroTlf.equals(t.numeroTlf))))
+                r = true;
+        }
+        return r;
+    }
 }

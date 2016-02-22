@@ -1,5 +1,7 @@
 package pojos.entities;
 
+import pojos.types.Provincia;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.PreRemove;
@@ -53,7 +55,7 @@ public class Producto {
     public void setStockActual(int stockActual) {
         this.stockActual = stockActual;
     }
-
+/*
     @PreRemove
     private void escribirEnFichero(){
         FileWriter escritor;
@@ -64,5 +66,16 @@ public class Producto {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+*/
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if (obj instanceof Producto){
+            Producto p = (Producto)obj;
+            if (idProducto.equals(p.idProducto) && descripcion.equals(p.descripcion) && stockActual == p.stockActual)
+                r = true;
+        }
+        return r;
     }
 }

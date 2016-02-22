@@ -30,4 +30,15 @@ public class Direccion {
     public String toString() {
         return String.format("- Calle: %s, Código Postal: %s, Número: %d, Población: \n\t\t%s", calle, codPostal, numero, poblacion.toString());
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if(obj instanceof Direccion){
+            Direccion d = (Direccion) obj;
+            if (calle.equals(d.calle) && codPostal.equals(d.codPostal) && numero == d.numero && ((poblacion != null && d.poblacion!= null && poblacion.equals(d.poblacion)) || (poblacion == null && d.poblacion == null)))
+                r = true;
+        }
+        return r;
+    }
 }

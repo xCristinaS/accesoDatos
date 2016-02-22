@@ -20,4 +20,15 @@ public class ProductoIndividual extends Producto{
     public String toString() {
         return String.format("%s, PVP: %.2f", super.toString(), pvp);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if (obj instanceof ProductoIndividual){
+            ProductoIndividual p = (ProductoIndividual) obj;
+            if (super.equals(p) && pvp == p.pvp)
+                r = true;
+        }
+        return r;
+    }
 }

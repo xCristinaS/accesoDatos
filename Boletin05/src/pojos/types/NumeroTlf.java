@@ -32,4 +32,15 @@ public class NumeroTlf {
     public void setNumero(String numero) {
         this.numero = numero;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean r = false;
+        if (obj instanceof NumeroTlf){
+            NumeroTlf n = (NumeroTlf) obj;
+            if (prefijo.equals(n.prefijo) && numero.equals(n.numero))
+                r = true;
+        }
+        return r;
+    }
 }
