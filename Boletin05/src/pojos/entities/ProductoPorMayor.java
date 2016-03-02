@@ -33,4 +33,28 @@ public class ProductoPorMayor extends Producto{
         }
         return r;
     }
+
+    public float getPvp1() {
+        return pvp1;
+    }
+
+    public void setPvp1(float pvp1) {
+        this.pvp1 = pvp1;
+    }
+
+    public float getPvp2() {
+        return pvp2;
+    }
+
+    public void setPvp2(float pvp2) {
+        this.pvp2 = pvp2;
+    }
+
+    public float getPvp3() {
+        return pvp3;
+    }
+
+    public void setPvp3(float pvp3) {
+        this.pvp3 = pvp3;
+    }
 }

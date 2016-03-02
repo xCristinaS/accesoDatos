@@ -20,7 +20,7 @@ public class Venta {
     @Id
     private int idVenta;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Cliente cliente;
 
     @Embedded
@@ -35,12 +35,46 @@ public class Venta {
     public Venta(int idVenta, boolean facturada, Cliente cliente, LinkedList<LineasVenta> lineas){
         this.idVenta = idVenta;
         this.facturada = facturada;
-        this.cliente = cliente;
+        setCliente(cliente);
         fechaVenta = new Date();
         if (lineas == null)
             this.lineas = new LinkedList<LineasVenta>();
         else
             this.lineas = lineas;
+    }
+
+    public Date getFechaVenta() {
+        return fechaVenta;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public LinkedList<LineasVenta> getLineas() {
+        return lineas;
+    }
+
+    public void setLineas(LinkedList<LineasVenta> lineas) {
+        this.lineas = lineas;
+    }
+
+    public void setFechaVenta(Date fechaVenta) {
+        this.fechaVenta = fechaVenta;
+    }
+
+    public boolean isFacturada() {
+        return facturada;
+    }
+
+    public void setFacturada(boolean facturada) {
+        this.facturada = facturada;
+    }
+
+    public void setCliente(Cliente cliente) {
+        if (cliente == null)
+            throw new IllegalArgumentException("El cliente no puede ser null");
+        this.cliente = cliente;
     }
 
     @PreRemove
@@ -119,6 +153,22 @@ public class Venta {
 
         public LineasVenta(int cantidadProductos, Producto producto){
             this.cantidadProductos = cantidadProductos;
+            this.producto = producto;
+        }
+
+        public int getCantidadProductos() {
+            return cantidadProductos;
+        }
+
+        public void setCantidadProductos(int cantidadProductos) {
+            this.cantidadProductos = cantidadProductos;
+        }
+
+        public Producto getProducto() {
+            return producto;
+        }
+
+        public void setProducto(Producto producto) {
             this.producto = producto;
         }
 

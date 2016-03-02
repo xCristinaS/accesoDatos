@@ -1,0 +1,36 @@
+DETALLES DE VENTA:
+- Nombre de cliente: manolito
+- ID de venta: 2
+- Fecha de la venta: lunes 01/02/2016
+- Importe total de la venta: 189887,55
+
+DETALLES DE PRODUCTOS EN VENTA:
+	- Tipo de producto: producto individual, Descripci?n del producto: portatil asus, Precio: 859,99, Cantidad de productos comprados: 200, Cantidad del importe producto en venta: 171998,00
+	- Tipo de producto: producto al por mayor, Descripci?n del producto: Playstation 4, Precio: 859,99, Cantidad de productos comprados: 20, Cantidad del importe producto en venta: 17199,80
+	- Tipo de producto: producto al por mayor, Descripci?n del producto: Pantalla LG, Precio: 689,75, Cantidad de productos comprados: 1, Cantidad del importe producto en venta: 689,75
+
+
+DETALLES DE VENTA:
+- Nombre de cliente: pepito
+- ID de venta: 3
+- Fecha de la venta: lunes 01/02/2016
+- Importe total de la venta: 295938,75
+
+DETALLES DE PRODUCTOS EN VENTA:
+	- Tipo de producto: producto individual, Descripci?n del producto: portatil asus, Precio: 859,99, Cantidad de productos comprados: 100, Cantidad del importe producto en venta: 85999,00
+	- Tipo de producto: producto al por mayor, Descripci?n del producto: Playstation 4, Precio: 418,50, Cantidad de productos comprados: 500, Cantidad del importe producto en venta: 209250,00
+	- Tipo de producto: producto al por mayor, Descripci?n del producto: Pantalla LG, Precio: 689,75, Cantidad de productos comprados: 1, Cantidad del importe producto en venta: 689,75
+
+
+DETALLES DE VENTA:
+- Nombre de cliente: manolito
+- ID de venta: 4
+- Fecha de la venta: lunes 01/02/2016
+- Importe total de la venta: 1269233,75
+
+DETALLES DE PRODUCTOS EN VENTA:
+	- Tipo de producto: producto individual, Descripci?n del producto: portatil asus, Precio: 859,99, Cantidad de productos comprados: 600, Cantidad del importe producto en venta: 515994,00
+	- Tipo de producto: producto al por mayor, Descripci?n del producto: Playstation 4, Precio: 501,70, Cantidad de productos comprados: 1500, Cantidad del importe producto en venta: 752550,00
+	- Tipo de producto: producto al por mayor, Descripci?n del producto: Pantalla LG, Precio: 689,75, Cantidad de productos comprados: 1, Cantidad del importe producto en venta: 689,75
+
+

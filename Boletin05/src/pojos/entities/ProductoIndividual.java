@@ -31,4 +31,12 @@ public class ProductoIndividual extends Producto{
         }
         return r;
     }
+
+    public float getPvp() {
+        return pvp;
+    }
+
+    public void setPvp(float pvp) {
+        this.pvp = pvp;
+    }
 }

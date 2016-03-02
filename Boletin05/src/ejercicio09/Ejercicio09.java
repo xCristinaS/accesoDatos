@@ -38,8 +38,14 @@ public class Ejercicio09 {
         t.addLast(new Telefono(TipoTlf.FIJO_PERSONAL, new NumeroTlf("956", "447878787")));
         c.setTelefonos(t);
         */
+
+        em.flush(); // Fuerza la escritura en la bdd de los objetos persistentes hasta este punto de la ejecucion
+
+        /*
         em.getTransaction().begin();
         em.getTransaction().commit();
+        */
+
 
         em.detach(c);
         c.setNombre("Baldomero (actualizado)");
